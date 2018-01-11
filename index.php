@@ -16,16 +16,16 @@ require_once ("koneksi.php");
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <img class="img-fluid d-block mx-auto" src="C:/Users/lenovo/Pictures/Gambar SMS.PNG">
+          <img class="img-fluid d-block mx-auto" src="sms.png">
         </div>
         <div class="col-md-4">
           <h1 class="">Sistem Management Sekolah</h1>
         </div>
         <div class="col-md-4">
 		<?php
-		if(isset($_SESSION['NIS'])){
+		if(isset($_SESSION['nis'])){
 		?>
-		<h3> <?php echo $_SESSION['Nama']; ?></h3>
+		<h3> <?php echo $_SESSION['nama']; ?></h3>
 		<br>
 		<a href="logout.php" type="submit" class="btn btn-danger">Logout</a>
 		<?php }else{ ?>
@@ -34,11 +34,13 @@ require_once ("koneksi.php");
               <input type="text" name="username" class="form-control" placeholder="Masukkan Username"> </div>
             <div class="form-group"> <label>Password</label>
               <input type="password" name="password" class="form-control" placeholder="Masukkan Password"> </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-info">Login</button>
+			<a href="daftar.php" type="submit" class="btn btn-success">Daftar</a>
           </form>
 		 <?php }?>
         </div>
       </div>
+	  <br>
       <div class="row">
         <div class="col-md-6"> </div>
       </div>
@@ -72,32 +74,47 @@ require_once ("koneksi.php");
   </nav>
   <div class="py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <div style="text-align: center;"><span style="font-size: 1rem;"><font face="FontAwesome"><b>NAVIGATION</b></font></span></div>
-            </li>
-            <li class="list-group-item">cek
-              <br>
-            </li>
-            <li class="list-group-item">site home</li>
-            <li class="list-group-item">my profile</li>
-            <li class="list-group-item">my courses</li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <div class="row mb-5">
-            <div class="col-md-7 offset-md-2">
-              <h2 class="text-primary">Penting nya pendidikan</h2>
-              <p class="">Pendidikan merupakan hal yang terpenting dalam kehidupan kita,ini berarti bahwa setiap manusia berhak mendapat dan berharap untuk selalu berkembang dalam pendidikan. Pendidikan secara umum mempunyai arti suatu proses kehidupan dalam mengembangkan
-                diri tiap individu untuk dapat hidup dan melangsungkan kehidupan. Sehingga menjadi seorang yang terdidik itu sangat penting. Pendidikan pertama kali yang kita dapatkan di lingkungan keluarga, lingkungan sekolah dan lingkungan masyarakat.</p>
+	 <div class="col-lg-12">
+
+          <div id="carouselExampleIndicators" class="carousel slide my-2" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div class="carousel-item active">
+                <img class="d-block img-fluid" src="abf.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="ppl.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block img-fluid" src="abc.png" alt="Third slide">
+              </div>
             </div>
-            <div class="col-md-5 align-self-center">
-              <img class="img-fluid d-block w-100 img-thumbnail" src="pentingnya-pendidikan.jpg"> </div>
-          </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+</div>
+</div>
+	<div class="row">
+        <div class="col-md-5">
+          <a href="#">
+            <img class="img-fluid rounded mb-3" width="400px" src="pentingnya-pendidikan.jpg" alt="">
+          </a>
         </div>
-      </div>
+        <div class="col-md-7">
+          <h3>Pentingnya pendidikan</h3>
+          <p>Pendidikan merupakan hal yang terpenting dalam kehidupan kita,ini berarti bahwa setiap manusia berhak mendapat dan berharap untuk selalu berkembang dalam pendidikan. Pendidikan secara umum mempunyai arti suatu proses kehidupan dalam mengembangkan
+                diri tiap individu untuk dapat hidup dan melangsungkan kehidupan. Sehingga menjadi seorang yang terdidik itu sangat penting. Pendidikan pertama kali yang kita dapatkan di lingkungan keluarga, lingkungan sekolah dan lingkungan masyarakat.</p>
+        </div>
+</div>
     </div>
   </div>
   <div class="py-5 bg-dark text-white">

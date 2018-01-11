@@ -19,9 +19,9 @@ $jumlah = mysql_num_rows($result);
 $row 	= mysql_fetch_array($result);
 
 if($jumlah==1){
-	$_SESSION['NIS']=$row['NIS'];
-	$_SESSION['Nama']=$row['Nama'];
-	$_SESSION['Poto']=$row['Poto'];
+	$_SESSION['nis']=$row['nis'];
+	$_SESSION['nama']=$row['nama'];
+	$_SESSION['foto']=$row['foto'];
 	
 	header("location: index.php");
 }
